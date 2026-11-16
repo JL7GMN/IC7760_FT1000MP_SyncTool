@@ -1,7 +1,7 @@
 ﻿Option Strict Off
 Imports OmniRig
 Public Class Form1
-    'V1　完成版
+    'V2　タイマー追加版
     Private OmniRig As OmniRigX
 
     Private Sub Form1_Load(
