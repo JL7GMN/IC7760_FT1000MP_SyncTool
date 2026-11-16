@@ -13,6 +13,10 @@ Public Class Form1
 
             OmniRig = New OmniRigX()
 
+            'OmniRigデータ取り込みタイミング合わせるために1秒待つ
+            Threading.Thread.Sleep(1000)
+            Application.DoEvents()
+
             Dim r1 As RigX = OmniRig.Rig1
             Dim r2 As RigX = OmniRig.Rig2
 
@@ -45,6 +49,36 @@ Public Class Form1
             lblStatus.Text = ex.Message
 
         End Try
+
+    End Sub
+
+    Private Sub chkAutoUpdate_CheckedChanged(
+    sender As Object,
+    e As EventArgs) Handles chkAutoUpdate.CheckedChanged
+
+        Timer1.Enabled = chkAutoUpdate.Checked
+
+        'チェックボックスにチェック無い時は手動更新ボタン押下可能にする
+        btnRefresh.Enabled = Not chkAutoUpdate.Checked
+
+    End Sub
+
+    Private Sub Timer1_Tick(
+    sender As Object,
+    e As EventArgs) Handles Timer1.Tick
+
+        UpdateDisplay()
+        If chkAutoUpdate.Checked Then
+
+            lblStatus.Text =
+                "自動更新" & Format(Now, "         HH:mm:ss")
+
+        Else
+
+            lblStatus.Text =
+                "手動更新" & Format(Now, "         HH:mm:ss")
+
+        End If
 
     End Sub
 
@@ -111,7 +145,7 @@ Public Class Form1
             UpdateDisplay()
 
             'lblStatus.Text = "同期完了"
-            lblStatus.Text = "同期完了 " & Format(Now, "       HH:mm:ss")
+            lblStatus.Text = "同期完了 " & Format(Now, "        HH:mm:ss")
 
         Catch ex As Exception
 
@@ -147,7 +181,7 @@ Public Class Form1
 
             UpdateDisplay()
 
-            lblStatus.Text = "周波数更新" & Format(Now, "    HH:mm:ss")
+            lblStatus.Text = "手動更新" & Format(Now, "         HH:mm:ss")
 
         Catch ex As Exception
 
@@ -161,7 +195,7 @@ Public Class Form1
 
         txtOffset.Text = "0"
 
-        lblStatus.Text = "オフセットクリア" & Format(Now, "HH:mm:ss")
+        lblStatus.Text = "オフセットクリア" & Format(Now, " HH:mm:ss")
 
     End Sub
 
