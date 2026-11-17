@@ -61,6 +61,8 @@ Public Class Form1
         'チェックボックスにチェック無い時は手動更新ボタン押下可能にする
         btnRefresh.Enabled = Not chkAutoUpdate.Checked
 
+        lblStatus.Text = "手動更新"
+
     End Sub
 
     Private Sub Timer1_Tick(
@@ -72,11 +74,6 @@ Public Class Form1
 
             lblStatus.Text =
                 "自動更新" & Format(Now, "         HH:mm:ss")
-
-        Else
-
-            lblStatus.Text =
-                "手動更新" & Format(Now, "         HH:mm:ss")
 
         End If
 
