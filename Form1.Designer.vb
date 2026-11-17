@@ -64,9 +64,10 @@ Partial Class Form1
         ' 
         btnSync.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
         btnSync.FlatStyle = FlatStyle.Popup
+        btnSync.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         btnSync.Location = New Point(11, 23)
         btnSync.Name = "btnSync"
-        btnSync.Size = New Size(119, 49)
+        btnSync.Size = New Size(120, 50)
         btnSync.TabIndex = 1
         btnSync.Text = "SYNC"
         btnSync.UseVisualStyleBackColor = False
@@ -74,7 +75,7 @@ Partial Class Form1
         ' lblStatus
         ' 
         lblStatus.AutoSize = True
-        lblStatus.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblStatus.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblStatus.Location = New Point(134, 22)
         lblStatus.Name = "lblStatus"
         lblStatus.Size = New Size(55, 21)
@@ -84,7 +85,7 @@ Partial Class Form1
         ' lblMaster
         ' 
         lblMaster.AutoSize = True
-        lblMaster.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblMaster.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblMaster.Location = New Point(62, 35)
         lblMaster.Name = "lblMaster"
         lblMaster.Size = New Size(55, 21)
@@ -94,7 +95,7 @@ Partial Class Form1
         ' lblSlave
         ' 
         lblSlave.AutoSize = True
-        lblSlave.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblSlave.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblSlave.Location = New Point(64, 89)
         lblSlave.Name = "lblSlave"
         lblSlave.Size = New Size(55, 21)
@@ -111,8 +112,8 @@ Partial Class Form1
         GroupBox1.Controls.Add(lblMaster)
         GroupBox1.Controls.Add(lblSlave)
         GroupBox1.FlatStyle = FlatStyle.Popup
-        GroupBox1.Font = New Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
-        GroupBox1.Location = New Point(4, 124)
+        GroupBox1.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        GroupBox1.Location = New Point(4, 137)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(349, 122)
         GroupBox1.TabIndex = 5
@@ -124,14 +125,14 @@ Partial Class Form1
         lblunit.AutoSize = True
         lblunit.Location = New Point(302, 63)
         lblunit.Name = "lblunit"
-        lblunit.Size = New Size(37, 20)
+        lblunit.Size = New Size(39, 21)
         lblunit.TabIndex = 9
         lblunit.Text = "[Hz]"
         ' 
         ' lblRig2
         ' 
         lblRig2.AutoSize = True
-        lblRig2.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblRig2.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblRig2.Location = New Point(4, 89)
         lblRig2.Name = "lblRig2"
         lblRig2.Size = New Size(55, 21)
@@ -143,14 +144,14 @@ Partial Class Form1
         lblOffset.AutoSize = True
         lblOffset.Location = New Point(82, 63)
         lblOffset.Name = "lblOffset"
-        lblOffset.Size = New Size(153, 20)
+        lblOffset.Size = New Size(162, 21)
         lblOffset.TabIndex = 8
         lblOffset.Text = "Rig2 = Rig1+オフセット"
         ' 
         ' lblRig1
         ' 
         lblRig1.AutoSize = True
-        lblRig1.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblRig1.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblRig1.Location = New Point(4, 35)
         lblRig1.Name = "lblRig1"
         lblRig1.Size = New Size(52, 21)
@@ -161,9 +162,10 @@ Partial Class Form1
         ' 
         Button1.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
         Button1.FlatStyle = FlatStyle.Popup
-        Button1.Location = New Point(11, 183)
+        Button1.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        Button1.Location = New Point(11, 190)
         Button1.Name = "Button1"
-        Button1.Size = New Size(119, 50)
+        Button1.Size = New Size(120, 50)
         Button1.TabIndex = 6
         Button1.Text = "END"
         Button1.UseVisualStyleBackColor = False
@@ -172,9 +174,9 @@ Partial Class Form1
         ' 
         btnRefresh.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
         btnRefresh.FlatStyle = FlatStyle.Popup
-        btnRefresh.Location = New Point(19, 20)
+        btnRefresh.Location = New Point(19, 23)
         btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(119, 34)
+        btnRefresh.Size = New Size(120, 50)
         btnRefresh.TabIndex = 7
         btnRefresh.Text = "更新"
         btnRefresh.UseVisualStyleBackColor = False
@@ -182,7 +184,7 @@ Partial Class Form1
         ' lblCondition
         ' 
         lblCondition.AutoSize = True
-        lblCondition.Font = New Font("Yu Gothic UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        lblCondition.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         lblCondition.Location = New Point(7, 22)
         lblCondition.Name = "lblCondition"
         lblCondition.Size = New Size(130, 21)
@@ -194,9 +196,10 @@ Partial Class Form1
         GroupBox3.Controls.Add(btnOffsetClear)
         GroupBox3.Controls.Add(btnSync)
         GroupBox3.Controls.Add(Button1)
+        GroupBox3.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
         GroupBox3.Location = New Point(362, 1)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(140, 245)
+        GroupBox3.Size = New Size(140, 258)
         GroupBox3.TabIndex = 11
         GroupBox3.TabStop = False
         GroupBox3.Text = "メニュー"
@@ -205,9 +208,10 @@ Partial Class Form1
         ' 
         btnOffsetClear.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(192))
         btnOffsetClear.FlatStyle = FlatStyle.Popup
-        btnOffsetClear.Location = New Point(11, 100)
+        btnOffsetClear.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        btnOffsetClear.Location = New Point(11, 106)
         btnOffsetClear.Name = "btnOffsetClear"
-        btnOffsetClear.Size = New Size(119, 49)
+        btnOffsetClear.Size = New Size(120, 50)
         btnOffsetClear.TabIndex = 8
         btnOffsetClear.Text = "オフセットクリア"
         btnOffsetClear.UseVisualStyleBackColor = False
@@ -226,10 +230,10 @@ Partial Class Form1
         ' GroupBox2
         ' 
         GroupBox2.Controls.Add(chkAutoUpdate)
-        GroupBox2.Font = New Font("Yu Gothic UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
-        GroupBox2.Location = New Point(4, 58)
+        GroupBox2.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        GroupBox2.Location = New Point(4, 56)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(182, 64)
+        GroupBox2.Size = New Size(182, 83)
         GroupBox2.TabIndex = 13
         GroupBox2.TabStop = False
         GroupBox2.Text = "自動更新設定"
@@ -237,9 +241,9 @@ Partial Class Form1
         ' chkAutoUpdate
         ' 
         chkAutoUpdate.AutoSize = True
-        chkAutoUpdate.Location = New Point(33, 26)
+        chkAutoUpdate.Location = New Point(33, 36)
         chkAutoUpdate.Name = "chkAutoUpdate"
-        chkAutoUpdate.Size = New Size(119, 24)
+        chkAutoUpdate.Size = New Size(125, 25)
         chkAutoUpdate.TabIndex = 0
         chkAutoUpdate.Text = "自動更新(1秒)"
         chkAutoUpdate.UseVisualStyleBackColor = True
@@ -247,9 +251,10 @@ Partial Class Form1
         ' GroupBox5
         ' 
         GroupBox5.Controls.Add(btnRefresh)
-        GroupBox5.Location = New Point(193, 58)
+        GroupBox5.Font = New Font("Yu Gothic UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        GroupBox5.Location = New Point(193, 56)
         GroupBox5.Name = "GroupBox5"
-        GroupBox5.Size = New Size(160, 64)
+        GroupBox5.Size = New Size(160, 83)
         GroupBox5.TabIndex = 14
         GroupBox5.TabStop = False
         GroupBox5.Text = "手動更新処理"
@@ -259,9 +264,9 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(508, 250)
+        ClientSize = New Size(508, 267)
         Controls.Add(GroupBox5)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox4)
