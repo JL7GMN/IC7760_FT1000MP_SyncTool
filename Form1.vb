@@ -8,6 +8,8 @@ Public Class Form1
     sender As Object,
     e As EventArgs) Handles MyBase.Load
 
+        Timer1.Interval = CInt(NumericUpDown1.Value) * 1000
+
         Try
             ' Me.Text = "IC-7760 ⇔ FT-1000MP Sync Tool"
 
@@ -78,6 +80,16 @@ Public Class Form1
         End If
 
     End Sub
+
+    Private Sub NumericUpDown1_ValueChanged(
+    sender As Object,
+    e As EventArgs) Handles NumericUpDown1.ValueChanged
+
+        Timer1.Interval = Math.Max(1, CInt(NumericUpDown1.Value)) * 1000
+
+    End Sub
+
+
 
     Private Function FormatFreq(freq As Integer) As String
 
