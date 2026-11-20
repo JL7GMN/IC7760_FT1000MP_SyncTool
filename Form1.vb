@@ -175,14 +175,15 @@ Public Class Form1
             Dim modeName2 As String = GetModeName(r2.Mode.ToString)
 
             Dim modeName As String
+            modeName = ""
 
             modeName = GetModeName(OmniRig.Rig1.Mode.ToString)
-            Me.lblmastermode.Text = modeName1
-
+            'Me.lblmastermode.Text = modeName1
+            Me.lblmastermode.Text = modeName
+            modeName = ""
             modeName = GetModeName(OmniRig.Rig2.Mode.ToString)
-            Me.lblclientmode.Text = modeName2
-
-
+            'Me.lblclientmode.Text = modeName2
+            Me.lblclientmode.Text = modeName
 
         Catch ex As Exception
             lblStatus.Text = ex.Message
