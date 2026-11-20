@@ -16,7 +16,7 @@ Public Class Form1
             OmniRig = New OmniRigX()
 
             'OmniRigデータ取り込みタイミング合わせるために1秒待つ
-            Threading.Thread.Sleep(1000)
+            Threading.Thread.Sleep(1200)
             Application.DoEvents()
 
             Dim r1 As RigX = OmniRig.Rig1
@@ -26,7 +26,7 @@ Public Class Form1
             Dim mode2 As String = OmniRig.Rig2.Mode.ToString
 
             'Me.Text = "IC-7760 ⇔ FT-1000MP Sync Tool"
-            Me.Text = r1.RigType.ToString & "　⇒ " & r2.RigType.ToString & "Sync Tool"
+            Me.Text = r1.RigType.ToString & " ⇒ " & r2.RigType.ToString & " Sync Tool"
 
             Dim mode1Name As String = GetModeName(mode1)
             Dim mode2Name As String = GetModeName(mode2)
