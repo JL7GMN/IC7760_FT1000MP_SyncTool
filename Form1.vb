@@ -1,5 +1,7 @@
 ﻿Option Strict Off
 Imports OmniRig
+Imports System.Diagnostics
+
 Public Class Form1
     'V1　タイマー追加版
     Private OmniRig As OmniRigX
@@ -26,7 +28,77 @@ Public Class Form1
             Dim mode2 As String = OmniRig.Rig2.Mode.ToString
 
             'Me.Text = "IC-7760 ⇔ FT-1000MP Sync Tool"
-            Me.Text = r1.RigType.ToString & " ⇒ " & r2.RigType.ToString & " Sync Tool"
+            '  Me.Text = r1.RigType.ToString & " ⇒ " & r2.RigType.ToString & " Sync Tool"
+
+
+            Dim omniVer As String = ""
+
+            Try
+                '実行ファイルしていしてバージョンを取得する場合は以下のようにする
+                'Dim info = FileVersionInfo.GetVersionInfo("C:\Program Files (x86)\Omni-Rig V2\omnirig2.exe") 　'2.1.0.0
+                'Dim info = FileVersionInfo.GetVersionInfo("C:\Program Files (x86)\Afreet\OmniRig\OmniRig.exe") '1.20.0.285
+                'omniVer = info.FileVersion           '2.1.0.0　→  インストールされているOmniRigのバージョン
+
+                omniVer = OmniRig.InterfaceVersion    '2.57     →　COM API バージョン
+                'omniVer = OmniRig.SoftwareVersion    '131073   →  内部管理用数値　未使用とする
+
+                Me.Text =
+                        r1.RigType.ToString & " ⇒ " &
+                        r2.RigType.ToString &
+                        " Sync Tool [OmniRig COM " &
+                        omniVer & "]"
+
+                'このフォーム名となる。→ "IC-7760 ⇒ FT-1000MP Sync Tool Ver1.0.0 [OmniRig COM 2.57]”
+
+
+            Catch
+                omniVer = "Unknown"
+            End Try
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            '    Try
+            '        Dim omniVer As String = OmniRig.InterfaceVersion.ToString
+
+            '        Me.Text =
+            'r1.RigType.ToString & " ⇒ " &
+            'r2.RigType.ToString &
+            '" Sync Tool  OmniRig Ver " &
+            'omniVer
+
+            '    Catch
+            '        Me.Text =
+            'r1.RigType.ToString & " ⇒ " &
+            'r2.RigType.ToString &
+            '" Sync Tool"
+            '    End Try
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             Dim mode1Name As String = GetModeName(mode1)
             Dim mode2Name As String = GetModeName(mode2)

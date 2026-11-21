@@ -11,9 +11,9 @@
   <ItemGroup>
     <COMReference Include="OmniRig">
       <WrapperTool>tlbimp</WrapperTool>
-      <VersionMinor>0</VersionMinor>
-      <VersionMajor>1</VersionMajor>
-      <Guid>4fe359c5-a58f-459d-be95-ca559fb4f270</Guid>
+      <VersionMinor>1</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>959819ff-b57b-468a-9f30-bba6be319987</Guid>
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
